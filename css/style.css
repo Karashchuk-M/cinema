@@ -67,7 +67,6 @@ button {
     max-width: 144rem;
     margin: auto;
     padding: 3rem 2.4rem 4rem;
-    border: 1px solid rebeccapurple;
 }
 .header__wrap{
     display:flex;
@@ -111,6 +110,7 @@ button {
 .header__date{
     text-align: center;
     margin-right: 8.6rem;
+    margin-left: 2.5rem;
 }
 .header__hour{
     font-size: 2rem;
