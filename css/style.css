@@ -111,25 +111,31 @@ button {
 .header__find input:placeholder{
     color: #fff;
     font-size: 2rem;
+    z-index: 10;
 }
 .header__date{
     text-align: center;
     margin-right: 8.6rem;
     margin-left: 2.5rem;
+    z-index: 10;
 }
 .header__hour{
     font-size: 2rem;
     line-height: 115%;
+    z-index: 10;
 }
 .header__days{
     font-size: 1.2rem;
     line-height: 117%;
+    z-index: 10;
 }
 .header__personal{
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
+    z-index: 10;
 }
+
 .main-display__treiler {
     position: relative;
     display: flex;
@@ -145,6 +151,7 @@ button {
     padding-top: 1.9rem;
     padding-left: 1.9rem;
     padding-bottom: 1.9rem;
+
 }
 .main-display__header {
     font-weight: 700;
@@ -166,7 +173,7 @@ button {
     top:  50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background:rgba(255, 255, 255, 0.03);
+    background:rgba(255, 255, 255, 0.3);
     width: 8.1rem;
     height: 8.1rem;
     border-radius: 50%;
@@ -218,17 +225,17 @@ button {
 }
 
 .trending__item {
+    z-index: 10;
     position: relative;
     display: flex;
     align-items: flex-end;
     border-radius: 1.6rem;
-    width: 46%;
+    width: 44%;
     height: 25.1rem;
     background-repeat:no-repeat;
     background-size: contain;
     background-position: center;
     background: url(../img/treiding_item.png);
-    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.9);
 }
 .trending{
     display: flex;
@@ -247,6 +254,7 @@ button {
     padding: 1.8rem 1rem 1.8rem 6.4rem;
 }
 .popular__footer {
+    display: flex;
     background-color:rgba(255, 255, 255, 0.4);
     padding: .8rem 1.9rem .8rem 6.4rem;
 }
@@ -264,6 +272,7 @@ button {
     color:#000;
 }
 .trending__plash {
+    z-index: 10;
     position: absolute;
     top: 2rem;
     left: 2rem;
@@ -309,6 +318,7 @@ button {
     margin-right: 5rem;
 }
 .popular__item {
+    z-index: 0;
     display: flex;
     align-items: flex-end;
     border-radius: 1.6rem;
@@ -319,10 +329,26 @@ button {
     background-position: center;
     background: url(../img/popular-back.jpg);
 }
+.main-display__treiler{
+    z-index: 10;
+}
+.trending__item:after, .aside__item:after {
+    content: "";
+    position: absolute;
+    display: block;
+    inset: 0;
+    border-radius: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 1.6rem;
+    z-index: 0;
+    }
 .popular__header {
     font-weight: 700;
     font-size: 1rem;
     line-height: 120%;
+}
+.popular__footer-left{
+    display: flex;
 }
 .popular__date {
     font-weight: 700;
@@ -339,7 +365,143 @@ button {
     line-height: 120%;
     margin-left: .4rem;
 }
+.aside {
+    padding-right: 5.9rem;
+}
+.aside__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.6rem;
+}
+.aside__header {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: left;
+    z-index: 10;
+    
+}
+.aside__sort{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: end;
+    z-index: 10;
+}
+.aside__sort-text{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    text-align: left;
+    margin-right: 1.5rem;
 
+    
+}
+.aside__sort-select {
+    display: flex;
+}
+.aside__sort-select span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 1.5rem;
+}
+.aside__sort-img {
+    width: 6px;
+    height: 6px;
+    left: 389px;
+    top: 204px;
+}
+.aside__item {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 1.6rem;
+    width: 100%;
+    height: 19.2rem;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: url(../img/aside-bg.jpg);
+    margin: 3rem 0;
+    padding: 1.9rem;
+}
+.asside__views{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left; 
+    z-index: 10;
+    width: 100%;
+
+}
+.aside__footer  {
+    z-index: 10;
+    margin-top: 10.2rem;
+}
+.button-play__wrap.top{
+    position: relative;
+    margin-left: 22rem;
+    margin-top: -13rem;
+}
+.button-play__wrap.bottom{
+    position: relative;
+    margin-left: 22rem;
+    margin-top: -13rem;
+}
+.button-play__wrap.small-plus .button-play{
+    width: 0;
+    height: 0;
+    border-top: .5rem solid transparent;
+    border-left: 1rem solid #FFFFFF;
+    border-bottom: .5rem solid rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+    border-radius: .2rem;
+}
+.aside__favourite-text {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+.aside__genre-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+.aside__genre:not(:first-child) {
+    padding: 1.5rem 3rem;
+    margin: 3rem 3rem 3rem 3rem;
+    border-radius: 40%;
+}
+.aside__genre:first-child{
+    margin: 3rem 0 3rem 0;
+    padding: 1.5rem;
+    border-radius: 40%;
+}
+.purple {
+    background-color: purple;
+}
+.orange {
+    background-color: orangered;
+}
+.green {
+    background-color: green;
+}
 /*сетка*/
 @media(max-width:108em){
     html{
@@ -416,4 +578,36 @@ button {
         font-size: 4.4px;
     }
 } 
+@media(max-width: 840px) {
+    .grid-init {
+        display: flex;
+        flex-direction: column;
+    }
+    .aside {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .aside__item {
+        min-width: 37.1rem;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__find{
+        margin: 4rem;
+    }
+    .header__personal{
+        margin: 4rem 4rem 0 0;
+    }
+
+}
 /*сетка*/ 
